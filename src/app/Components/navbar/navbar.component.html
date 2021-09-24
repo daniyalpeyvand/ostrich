@@ -1,0 +1,53 @@
+<div class="row"
+    style="height: 60px; width: auto; background-image: linear-gradient(rgba(108, 122, 137, 1),rgba(36, 37, 42, 1));box-shadow : 0px 7px 12px gray;">
+
+    <div class="col-sm-1" style="margin-top: 7px; padding-bottom: 7px;">
+        <div class="login">
+            <a routerLink="/login" routerLinkActive="active" id="Line"><img src="../assets/login.png" title="login" style="padding-top: 6px;" /></a>
+        </div>
+    </div>
+   <a routerLink="/testLogManager" routerLinkActive = "active">testLogManager</a>
+   &nbsp;
+   <a routerLink = "/displayLogs" routerLingActive = "active">displayLogs</a>
+    
+    <a routerLink="/addProduct" routerLinkActive="active">
+        <div class="col-sm-2 col-sm-offset-2" id="Line">اضافه کردن محصول</div>
+       </a>
+  
+    <a  routerLink="/contactUs" routerLinkActive="active">
+         <div class="col-sm-1 " id="Line">تماس با ما</div>
+        </a>
+        <a routerLink="/aboutUs" routerLinkActive="active">
+             <div class="col-sm-1 " id="Line">درباره ی ما</div>
+        </a>
+    <div class="col-sm-2 " >
+        <div class="row">
+            <a routerLink="/gallery" routerLinkActive="active" >
+            <div class="col-sm-9 col-sm-offset-3" id="Line">
+                گالری تصاویر
+            </div>
+        </a>
+        </div>
+    </div>
+    <div class="col-sm-2" style="color: white;">
+        <div class="row" id="menu">
+            <div class="col-sm-1 col-sm-push-2"><i class="material-icons" style="margin-top: 13px;">arrow_drop_down</i></div>
+            <div class="col-sm-5" style="padding-top: 15px; font-weight: 550; font-size: 16px;">
+               
+            <ul id="productListMain">
+                <ng-container>محصولات</ng-container>
+                
+                
+          
+                <!-- <div style="padding-top: 11px; margin-right: 30px; position:absolute"> -->
+                    <!-- <li *ngFor="let item of productList" id="productList">{{item.title}}</li> -->
+                <!-- </div> -->
+                <li *ngFor="let item of productList" id="productList">{{item.title}}</li>
+            </ul>
+   
+            
+            </div>
+        </div>
+    </div>
+    <a routerLink="/home" routerLinkActive="active" id="Line"> <div class="col-sm-1 " id="Line">خانه</div></a>
+</div>

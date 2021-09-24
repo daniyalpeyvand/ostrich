@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container-fluid">
+
+
+    <div class="panel-group">
+        <div class="panel panel-warning" id="form">
+            <div class="panel-heading" id="panelh">اضافه کردن محصول</div>
+
+            <div class="panel-body" id="panelb">
+
+                <div class="row">
+                    <div class="col-sm-12" style="margin-top: 25px;">
+                        <form (ngSubmit)="onSubmit()" #addProductForm="ngForm" autocomplete="off" novalidate>
+                            <label for="tag" class="col-form-label col-sm-3"
+                                style="margin-top: 10px; margin-right: -113px; color: #F4DF4EFF;">
+                                دسته بندی
+
+                                <i style="color: red;">*</i>
+                            </label>
+
+                            <div class="col-sm-9">
+                                <select id="tag" name="tag" class="form-control">
+                                    <option>روغن</option>
+                                    <option>پر</option>
+                                    <option>تخم</option>
+                                    <option>گوشت</option>
+                                    <option>چرم</option>
+                                </select>
+
+
+                                <div class="form-group row" id="title">
+                                    <label for="title" class="col-form-label col-sm-3" style="margin-top: 18px; color: #F4DF4EFF;">
+                                        عنوان
+                                        <i style="color: red;">*</i>
+                                    </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="title" id="title" name="title" [(ngModel)]="product.title"
+                                            class="form-control" #title="ngModel" required minlength="3" maxlength="40"
+                                            placeholder="مانند : روغن شترمرغ بسته 2 عددی" />
+
+                                        <div class="alert alert-danger" *ngIf="title.invalid && title.dirty"
+                                            style="direction: rtl;">
+                                            <span class="help-block" *ngIf="title?.errors?.required">
+                                                ورود عنوان الزامی میباشد
+                                            </span>
+                                            <span class="help-block" *ngIf="title?.errors?.minlength">
+                                                عنوان وارده میبایست حداقل 3 کاراکتر باشد
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="shortDescription" class="col-form-label col-sm-3" style="margin-top: 20px; color: #F4DF4EFF; ">
+                                        توضیح مختصر
+                                        <i style="color: red;">*</i>
+                                    </label>
+
+                                    <div class="col-sm-9">
+                                        <textarea type="text" id="shortDescription" name="shortDescription"
+                                            class="form-control" [(ngModel)]="product.shortDescription"
+                                            #shortDescription="ngModel" required minlength="10" maxlength="200"
+                                            placeholder="مانند : روغن شترمرغ بسیار مفیداست "
+                                            style="margin-top: 10px;"></textarea>
+
+                                        <div class="alert alert-danger"
+                                            *ngIf="shortDescription.invalid && shortDescription.dirty"
+                                            style="direction: rtl;">
+                                            <span class="help-block" *ngIf="shortDescription?.errors?.required">
+                                                توضیح مختصر الزامی است
+                                            </span>
+                                            <span class="help-block" *ngIf="shortDescription?.errors?.minlength">
+                                                توضیح مختصر میبایست حداقل 10 کاراکتر باشد
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row">
+                                    <label for="text" class="col-form-label col-sm-3" style="margin-top: 26px; color: #F4DF4EFF;">
+                                        متن
+                                        <i style="color: red;">*</i>
+                                    </label>
+
+                                    <div class="col-sm-9">
+                                        <textarea type="text" id="text" name="text" class="form-control"
+                                            [(ngModel)]="product.text" #text="ngModel" required minlength="20"
+                                            maxlength="500"
+                                            placeholder=" مانند : روغن شترمرغ بسیار مفیداست و بسته ی پیش رو برای حفظ و جوانسازی پوست میباشد "
+                                            style="margin-top: 10px;"></textarea>
+
+                                        <div class="alert alert-danger" *ngIf="text.invalid && text.dirty"
+                                            style="direction: rtl;">
+                                            <span class="help-block" *ngIf="text?.errors?.required">
+                                                متن الزامی است
+                                            </span>
+                                            <span class="help-block" *ngIf="text?.errors?.minlength">
+                                                متن میبایست حداقل 20 کاراکتر باشد
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row" id="imageName">
+                                    <label for="imageName" class="col-form-label col-sm-3" style="margin-top: 5px; color: #F4DF4EFF;">
+                                        عکس
+                                        <i style="color: red;">*</i>
+                                    </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="file" id="imageName" name="imageName"
+                                            [(ngModel)]="product.imageName" class="form-control" #imageName="ngModel"
+                                            required accept="image/png, image/jpeg" />
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row" id="Price">
+                                    <label for="Price" class="col-form-label col-sm-3" style="margin-top: 5px; color: #F4DF4EFF;">
+                                        مبلغ (تومان)
+                                        <i style="color: red;">*</i>
+                                    </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="number" id="Price" name="Price" [(ngModel)]="product.Price"
+                                            class="form-control" #Price="ngModel" required minlength="4"
+                                            style="width :289px" placeholder="کمترین مبلغ 1000 تومان میباشد" min="1000"/>
+
+                                        <div class="alert alert-danger" *ngIf="Price.invalid && Price.dirty"
+                                            style="direction: rtl;">
+                                            <span class="help-block" *ngIf="Price?.errors?.required">
+                                                مبلغ الزامی است
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group " id="button">
+                                        <div class="col-sm-9 offset-sm-3" id="button">
+                                            <button type="submit" class="btn" style="background-color: #FBEB50 !important; color: black;"
+                                                [disabled]="!addProductForm.form.valid">
+                                               اضافه کردن
+                                            </button>
+                                            &nbsp;
+                                            <button type="reset" class="btn btn-danger" style="color: black;">
+                                                پاک کردن
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+#form{
+    margin-left: 38%;
+    margin-top: 50px;
+    height: auto;
+    width: 360px;
+}
+
+#panelh{
+
+    direction: rtl;
+    font-size: 16px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#panelb{
+    height: auto;
+
+}
+body {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+
+#panelf{
+    background-color: rgba(204 , 204, 204, 0.9);
+
+    direction: rtl;
+}
+
+#button{
+    margin-left: 177px;
+    margin-top: 108px;
+}
+
+.dast{
+  font-size: 22px; padding-top: 4px; color: black; font-weight: 100;
+}
+
+.menu{
+  color: #282b31;
+  font-size: 16px; font-weight: 550;
+  
+}
+
+.top{
+  list-style-type: none; font-size: 16px; font-weight: 550;
+}
+
+.tozih{
+  direction: rtl;
+  font-size: 22px;
+  color: black;
+  padding-top: 20px;
+}
+
+.Register{
+  text-decoration: none;
+  color: #282b31;
+  font-size: 17px;
+}

@@ -1,0 +1,56 @@
+.img{
+    width: 400px;
+    height: 300px;
+    padding: 4px 4px;
+    direction: rtl;
+    float: right;
+    background-color: rgba(146 227 251 / 35%);
+    
+    
+}
+
+ ul li {
+    
+    width: 370px;
+    height: 300px;
+    display: inline;
+}
+
+ ul li :hover{
+    
+    border: black 0.5px solid;
+}
+
+ ul {
+
+    width: 370px;
+    height: 300px;
+    display: inline;
+}
+.gallery{
+    padding-top: 15px;
+    
+
+}
+
+.dast{
+    font-size: 22px; padding-top: 4px; color: black; font-weight: 100;
+  }
+  
+  .menu{
+    color: #282b31;
+    font-size: 16px; font-weight: 550;
+    
+    
+  }
+  
+  .top{
+    list-style-type: none; font-size: 16px; font-weight: 550;
+  }
+  
+  .tozih{
+    direction: rtl;
+    font-size: 22px;
+    color: black;
+    padding-top: 20px;
+  }

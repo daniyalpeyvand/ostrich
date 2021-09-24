@@ -1,0 +1,97 @@
+<div class="header" style="direction: rtl;">
+    <div class="container-fluid">
+        <div class="row"
+            style="background-image: linear-gradient(rgba(238, 238, 0, 1),rgba(244, 247, 118, 1)); height: auto; width: 104%;">
+
+
+            <div class="col-sm-2" style="color: rgba(34, 31, 31, 0.712); padding-right: 48px; padding-top: 67px; ">
+
+
+                <ng-container style="font-weight: bold;"> زبان : </ng-container>
+
+                <select style="color: black;">
+                    <option *ngFor="let item of languages">{{item}}</option>
+                    
+                </select>
+
+
+            </div>
+            <div class="col-sm-3" style="padding-top: 63px;">
+
+                <div class="search_box">
+                    <form>
+                        <input type="text" [(ngModel)]="search" [ngModelOptions]="{standalone: true} "
+                            value="{{search}}" onfocus="this.value = '';"
+                            onblur="if (this.value == '') {this.value = 'جستجو برای محصولات';}" />
+
+
+
+                        <input type="submit" value="جستجو" (click)="searchClick()"/>
+
+
+                        <br>
+                        <br>
+
+
+                        <p>محصول جستجو شده : {{search}}
+                            
+                        </p>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3" style="padding-top: 65px; padding-right: 55px;">
+                <div class="row">
+                    <div class="shopping_cart">
+                        <div class="cart">
+                            <a href="#" title="View my shopping cart" rel="nofollow">
+                                <div class="col-sm-9" style="padding-right: 18px;">
+
+
+                                    <strong class="opencart"> </strong>
+                                    <span class="cart_title">سبد خرید</span>
+                                    <span class="no_product">(خالی)</span>
+
+
+                                </div>
+
+
+                                <div class="col-sm-3" style="margin-left: -97px;padding-top: 2px;">
+
+                                    <i class="glyphicon glyphicon-shopping-cart"
+                                        style="color: black; font-size: 23px; padding-right: 29px; margin-top: 2px;"></i>
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+
+                <a href="/"><img src="./assets/Text.png" style="width: 195px; height: 105px; margin-top: 35px;"></a>
+            </div>
+
+
+            <div class="col-sm-2">
+                <div class="logo">
+                    <a href="/"><img src="../assets/ostrich.png"
+                            style="height: 170px; width: 195px; padding-right: auto;"></a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+
+  

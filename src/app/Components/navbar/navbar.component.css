@@ -1,0 +1,60 @@
+.login {
+    float: right;
+    width: 60px;
+    height: 32px;
+    display: block;
+    border: 1px solid #CECECE;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../../../assets/gradient_light-1.png) 0 0 repeat-x;
+  }
+
+  #Line{
+    color: white;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 550;
+    text-decoration: none;
+  }
+
+  
+
+  #productList{
+
+    background-color: #1d1d25d9;
+    width: 88px;
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+    font-weight: 200;
+    transition-duration: 0.3s;
+    direction: rtl;
+    list-style-type: none;
+    display: none;
+    margin-left: -27px;
+    padding-top: 15px;
+    
+  
+
+  }
+
+  #productListMain :hover {
+
+    background-color: #8b8a8ab7;
+    position: relative;
+    
+  }
+
+ #menu :hover > ul li {
+
+    display: block;
+    position: relative;
+    
+   
+  }
+
+  a.active div {
+    color: #FAE62D !important;
+  }

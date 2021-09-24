@@ -1,0 +1,12 @@
+<h2>Logs</h2>
+
+<div *ngIf="logManagerService?.getErrorMessages()?.length > 0" class="alert alert-danger">
+<h5>
+    Error(S)
+</h5>
+<ul>
+    <li *ngFor="let message of logManagerService.getErrorMessages()"> {{ message }} </li>
+</ul>
+
+<button type="button" (click) = "clearErrorLogs()" class="btn btn-secondary btn-sm">clear</button>
+</div>
